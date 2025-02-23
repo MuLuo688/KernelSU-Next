@@ -514,7 +514,7 @@ static int ksu_umount_mnt(struct path *path, int flags)
 #endif
 }
 
-static void try_umount(const char *mnt, bool check_mnt, int flags)
+static void ksu_try_umount(const char *mnt, bool check_mnt, int flags)
 {
 	struct path path;
 	int err = kern_path(mnt, 0, &path);
